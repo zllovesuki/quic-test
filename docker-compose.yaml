@@ -1,0 +1,11 @@
+version: '3.9`'
+
+services:
+  specter:
+    image: miragespace/specter:gso_detection
+    restart: unless-stopped
+    environment:
+      - DOH=false
+    volumes:
+      - ./config:/app/config
+    command: --verbose client tunnel --config /app/config/specter.yaml

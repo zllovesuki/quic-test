@@ -1,0 +1,4 @@
+version: 2
+apex: fly.specter.im:443
+tunnels:
+  - target: http://127.0.0.1:8080
